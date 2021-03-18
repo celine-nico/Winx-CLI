@@ -8,5 +8,6 @@ require_relative "../lib/cli"
 require_relative "../lib/scrape"
 require_relative "../lib/winx"
 
+Scraper.scrape_winx
 
-CLI.new.run
+# CLI.new.run
