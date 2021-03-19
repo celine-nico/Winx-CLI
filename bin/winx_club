@@ -1,0 +1,30 @@
+#!/usr/bin/env ruby
+
+require 'open-uri'
+require 'nokogiri'
+require 'pry'
+
+require_relative "../lib/cli"
+require_relative "../lib/scrape"
+require_relative "../lib/winx"
+
+Scraper.scrape_winx
+
+# CLI.new.run
+
+# class Scraper 
+
+#     WINX_URL = "https://nickelodeon.fandom.com/wiki/"
+
+#     def self.scrape_winx 
+#         html = open("https://nickelodeon.fandom.com/wiki/List_of_Winx_Club_characters")
+#         sleep 10
+#         doc = Nokogiri::HTML(html)
+#         doc.css("table.NickTable")[0].css("tr").shift
+#         doc.css("table.NickTable")[0].css("tr").each do |winx|
+#         #     name = doc.css("table.NickTable")[0].css("tr a")[1].text
+#         #     url =  doc.css("table.NickTable")[0].css("tr a")[1].attr("href")
+#         binding.pry
+#         end
+#     end 
+# end 

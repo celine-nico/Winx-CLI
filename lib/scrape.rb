@@ -1,12 +1,16 @@
 class Scraper 
 
-    WINX_URL = "https://winx.fandom.com/"
+    WINX_URL = "https://winx-club.fandom.com/wiki/"
 
     def self.scrape_winx 
-        html = open(https://winx.fandom.com/wiki/Category:Characters)
+        html = open("https://winx-club.fandom.com/wiki/Category:Characters")
         doc = Nokogiri::HTML(html)
-        binding.pry 
-        # doc.css("li.category-page_member").each do |winx|
-        #     name = winx.css('a')
-    end 
+        doc.css(".category-page__member-link").each do |winx|
+            name = winx.text
+            url =  winx.attr("href") 
+            
+            Winx.new(name, url)
+        end
+        binding.pry
+    end
 end 

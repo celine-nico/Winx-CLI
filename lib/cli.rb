@@ -4,4 +4,4 @@ class CLI
         puts "We are the Winx!"
 
     end 
-end 
+end
