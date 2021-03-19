@@ -1,5 +1,5 @@
 class Winx 
-    attr_accessor :name, :url 
+    attr_accessor :name, :url, :power 
     @@all = []
 
     def initialize(name, url)
