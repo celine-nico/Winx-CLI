@@ -29,8 +29,10 @@ class CLI
 
     def display_winx_traits(winx)
         Scraper.scrape_single_winx(winx)
-        puts "Hi, I'm #{winx.name}!"
-        puts ""
-        puts "My powers include: #{winx.power}"
+        block = "[A-Z][a-z]+"
+        puts "\nHi, I'm #{winx.name}!"
+        puts "\nAnd I'm the #{winx.alias}!"
+
+        puts "\nMy powers include: \n\n#{winx.power.scan(/#{block}(?:\s+#{block})*/).join("\n")}"
     end 
 end

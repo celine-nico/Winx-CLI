@@ -17,14 +17,23 @@ class Scraper
 
     def self.scrape_single_winx(winx)
         html = open(WINX_URL+winx.url)
-        doc = Nokogiri::HTML(html) 
-        powers = []
-        doc.css("table.mw-collapsible-content")[0].css("tr td")[3].each do |power|
-            powers << power
-            binding.pry 
-        end 
-        # doc.css("table.NickTable")[0].css("tr")
+        doc = Nokogiri::HTML(html)
+        # binding.pry
         winx.power = doc.css("table.mw-collapsible-content")[0].css("tr td")[3].text
+
+        if winx.name == "Tecna"
+            winx.alias = doc.css("td")[5].text.strip
+        elsif winx.name == "Roxy"
+            winx.alias = doc.css("td")[3].text.strip
+        elsif winx.name == "Aisha"
+            winx.alias = doc.css("td")[3].text.strip
+        else 
+            winx.alias = doc.css("td")[6].text.strip
+        end 
         
     end 
 end 
+
+# Aisha_alias = doc.css("td")[3].text.strip 
+#Roxy_alias = doc.css("td")[3].text.strip 
+#Tecna_alias = doc.css("td")[5].text.strip
