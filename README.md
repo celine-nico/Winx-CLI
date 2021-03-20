@@ -16,4 +16,4 @@ To start the application, run:
 This is a safe, welcoming community that is open for any kind of collaboration. Reports or signs of error are welcome to be reported on GitHub via https://github.com/celine-nico/Winx-CLI . All contributors are expected to follow the [Contributor Covenant](https://www.contributor-covenant.org/). 
 
 ## License 
-Gem is available as open source under the [MIT License](http://www.opensource.org/licenses/mit-license) . 
+Gems are available as open source under the [MIT License](http://www.opensource.org/licenses/mit-license) . 
